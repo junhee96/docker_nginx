@@ -19,16 +19,16 @@ ec2로 Django, nginx, Docker 구동방법
 6. nginx 2개 config(nginx.config, nginx-app.conf), Dockerfile(nginx 설정) 작성
 7. docker 이미지생성
 
-    docker build -t awsproject/nginx .
+        docker build -t awsproject/nginx .
 
 8. nginx dockek 이미지 실행
 
-    docker run -p 80:80 awsproject/nginx
+        docker run -p 80:80 awsproject/nginx
 
 9. docker 이미지를 관리하는 툴 설치
 
-    sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-    sudo chmod +x /usr/local/bin/docker-compose
+        sudo curl -L https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+        sudo chmod +x /usr/local/bin/docker-compose
 
 10. docker-compose.yml 작성
 11. Dockerfile 주석 처리 
@@ -41,4 +41,4 @@ CMD ["nginx", "-g", "daemon off;"]
 12. uwsgi.ini 작성
 13. dokcer-compose를 build하고 실행(up/down으로 관리)
 
-    docker-compose up -d --build
+        docker-compose up -d --build
