@@ -4,7 +4,7 @@ ec2로 Django, nginx, Docker 구동방법
 1. 도커 설치
 2. 권한 주기
 
-    curl -fsSL https://get.docker.com/ | sudo sh  # 도커 설치
+    curl -fsSL https://get.docker.com/ | sudo sh  # 도커 설치   
     sudo usermod -aG docker $USER # 현재 접속중인 사용자에게 권한주기
 
 3. Dockerfile(Python, 패키지등등 설정)
