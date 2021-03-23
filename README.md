@@ -10,20 +10,20 @@ ec2로 Django, nginx, Docker 구동방법
 3. Dockerfile(Python, 패키지등등 설정)
 4. docker 이미지생성
 
-        docker build -t awsproject/django .
+        docker build -t docker-server/django .
 
 5. docker 이미지 실행
 
-        docker run -p 8000:8000  awsproject/django
+        docker run -p 8000:8000  docker-server/django
 
 6. nginx 2개 config(nginx.config, nginx-app.conf), Dockerfile(nginx 설정) 작성
 7. docker 이미지생성
 
-        docker build -t awsproject/nginx .
+        docker build -t docker-server/nginx .
 
 8. nginx dockek 이미지 실행
 
-        docker run -p 80:80 awsproject/nginx
+        docker run -p 80:80 docker-server/nginx
 
 9. docker 이미지를 관리하는 툴 설치
 
